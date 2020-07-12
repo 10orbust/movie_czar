@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Group Rsvps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>User</th>
+      <th>Accecpted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_rsvps.each do |group_rsvp| %>
+      <tr>
+        <td><%= group_rsvp.group_id %></td>
+        <td><%= group_rsvp.user_id %></td>
+        <td><%= group_rsvp.accecpted %></td>
+        <td><%= link_to 'Show', group_rsvp %></td>
+        <td><%= link_to 'Edit', edit_group_rsvp_path(group_rsvp) %></td>
+        <td><%= link_to 'Destroy', group_rsvp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group Rsvp', new_group_rsvp_path %>

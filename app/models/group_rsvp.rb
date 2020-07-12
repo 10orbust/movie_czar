@@ -1,0 +1,2 @@
+class GroupRsvp < ApplicationRecord
+end

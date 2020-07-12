@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Group Czars</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>User</th>
+      <th>Czar count</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_czars.each do |group_czar| %>
+      <tr>
+        <td><%= group_czar.group_id %></td>
+        <td><%= group_czar.user_id %></td>
+        <td><%= group_czar.czar_count %></td>
+        <td><%= link_to 'Show', group_czar %></td>
+        <td><%= link_to 'Edit', edit_group_czar_path(group_czar) %></td>
+        <td><%= link_to 'Destroy', group_czar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group Czar', new_group_czar_path %>
