@@ -1,0 +1,2 @@
+module GroupRsvpsHelper
+end

@@ -1,0 +1,32 @@
+<%= form_with(model: group_rsvp, local: true) do |form| %>
+  <% if group_rsvp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(group_rsvp.errors.count, "error") %> prohibited this group_rsvp from being saved:</h2>
+
+      <ul>
+        <% group_rsvp.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :group_id %>
+    <%= form.number_field :group_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accecpted %>
+    <%= form.check_box :accecpted %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,2 @@
+class GroupCzar < ApplicationRecord
+end

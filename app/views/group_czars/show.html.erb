@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @group_czar.group_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @group_czar.user_id %>
+</p>
+
+<p>
+  <strong>Czar count:</strong>
+  <%= @group_czar.czar_count %>
+</p>
+
+<%= link_to 'Edit', edit_group_czar_path(@group_czar) %> |
+<%= link_to 'Back', group_czars_path %>

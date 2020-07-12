@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Group Invites</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sender</th>
+      <th>Receiver</th>
+      <th>Accecpted</th>
+      <th>Group</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @group_invites.each do |group_invite| %>
+      <tr>
+        <td><%= group_invite.sender_id %></td>
+        <td><%= group_invite.receiver_id %></td>
+        <td><%= group_invite.accecpted %></td>
+        <td><%= group_invite.group_id %></td>
+        <td><%= link_to 'Show', group_invite %></td>
+        <td><%= link_to 'Edit', edit_group_invite_path(group_invite) %></td>
+        <td><%= link_to 'Destroy', group_invite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Group Invite', new_group_invite_path %>
